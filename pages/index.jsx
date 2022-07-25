@@ -1,6 +1,7 @@
 import Head from "next/head";
 import React from "react";
 import Header from "../components/Header";
+import Content from "../components/Principal";
 
 export default function index() {
 	return (
@@ -13,6 +14,7 @@ export default function index() {
 			<main>
 				{/* SideBar */}
 				{/* Principal content */}
+				<Content />
 				{/* Contacts and Widgets */}
 			</main>
 		</div>

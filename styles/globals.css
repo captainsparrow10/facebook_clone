@@ -1,12 +1,45 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer components {
+	/* Header */
+	@layer components {
+		.header {
+			@apply p-2 w-screen shadow-md;
+		}
+		.nav {
+			@apply flex justify-between w-full;
+		}
+		.iconlist {
+			@apply flex justify-between items-center;
+		}
+		.icon {
+			@apply h-6 text-blue-500 sm:h-7;
+		}
+	}
+	/* Content */
+	@layer components {
+		.content {
+			@apply w-full mt-3;
+		}
+		/* Send data */
+		@layer components {
+			.sendbox {
+				@apply flex justify-between w-full items-center;
+			}
+			.imgsendbox {
+				@apply flex justify-center w-1/5;
+			}
+			.inputsendbox {
+				@apply w-3/5 rounded-full bg-blue-100 px-2 py-1 sm:py-2 flex justify-center;
+			}
+			.buttonsendbox {
+				@apply w-1/5 flex justify-center;
+			}
+		}
+		/* Stories */
+		@layer components {
 
-@layer components{
-  .nav{
-    @apply flex justify-between;
-  }
-  .icon{
-    @apply h-6 text-blue-500
-  }
+		}
+	}
 }
