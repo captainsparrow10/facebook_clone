@@ -3,12 +3,12 @@ import React from "react";
 import Header from "../components/Header";
 import Content from "../components/Principal";
 import Contacts from "../components/Principal/Contacts";
-
 export default function index() {
 	return (
-		<div>
+		<>
 			<Head>
 				<title>Facebook</title>
+				<link rel="shortcut icon" href="/facebook.ico"/>
 			</Head>
 			{/* Header */}
 			<Header />
@@ -19,6 +19,6 @@ export default function index() {
 				{/* Contacts and Widgets  cuando esta en 1024 */}
 				<Contacts/>
 			</main>
-		</div>
+		</>
 	);
 }
