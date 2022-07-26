@@ -2,6 +2,7 @@ import Head from "next/head";
 import React from "react";
 import Header from "../components/Header";
 import Content from "../components/Principal";
+import Contacts from "../components/Principal/Contacts";
 
 export default function index() {
 	return (
@@ -11,11 +12,12 @@ export default function index() {
 			</Head>
 			{/* Header */}
 			<Header />
-			<main>
-				{/* SideBar */}
+			<main className="flex justify-center">
+				{/* SideBar aparece en full screen*/}
 				{/* Principal content */}
-				<Content />
-				{/* Contacts and Widgets */}
+				<Content  />
+				{/* Contacts and Widgets  cuando esta en 1024 */}
+				<Contacts/>
 			</main>
 		</div>
 	);

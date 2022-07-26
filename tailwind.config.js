@@ -6,9 +6,9 @@ module.exports = {
 	],
 	theme: {
 		extend: {
-			backgroundImage: {
-				'kaisa': "url('/components/assets/img/facebook-profile.jpg')",
-			},
+			fontFamily: {
+				'sans': 'Helvetica, Arial, sans-serif',
+			}
 		},
 	},
 	plugins: [],

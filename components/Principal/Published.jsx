@@ -14,11 +14,11 @@ export default function Published() {
 					/>
 				</div>
 				<div className="px-2">
-					<h1 className="text-lg md:text-xl font-bold">Sparrow</h1>
-					<h2 className="text-md md:text-lg text-gray-500">2h</h2>
+					<h1 className="texto-titulo font-bold">Sparrow</h1>
+					<h2 className="texto-generico text-gray-500">2h</h2>
 				</div>
 			</div>
-			<div className="px-2 text-justify py-1 text-md md:text-lg">
+			<div className="px-2 text-justify py-1 texto-generico">
 				<p>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
 					aliquam natus dolorem illo vitae voluptatibus earum? Ratione,

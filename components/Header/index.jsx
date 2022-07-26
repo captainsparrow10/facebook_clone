@@ -27,13 +27,16 @@ export default function Header() {
 						/>
 					</div>
 					<div className="hidden sm:inline-flex items-center ">
-						<Image
-							src={require("../assets/img/facebook.png")}
-							width={40}
-							height={30}
-							layout="fixed"
-							alt="facebook logo"
-						/>
+						<div className="relative w-[40px] h-[40px] xl:w-[50px] xl:h-[50px]">
+							<Image
+								className="rounded-full"
+								objectFit="cover"
+								src={require("../assets/img/facebook.png")}
+								layout="fill"
+								alt="facebook logo"
+							/>
+						</div>
+
 						<SearchIcon className="icon ml-2" />
 					</div>
 				</div>
@@ -58,16 +61,17 @@ export default function Header() {
 							<BellIcon className="icon  mr-2" />
 						</div>
 						<div className="flex items-center">
-							<Image
-								className="rounded-full"
-								src={require("../assets/img/facebook-profile.jpg")}
-								width={40}
-								height={40}
-								layout="fixed"
-								alt="facebook logo"
-							/>
+							<div className="relative w-[40px] h-[40px] xl:w-[50px] xl:h-[50px]">
+								<Image
+									className="rounded-full"
+									objectFit="cover"
+									src={require("../assets/img/facebook-profile.jpg")}
+									layout="fill"
+									alt="facebook logo"
+								/>
+							</div>
 						</div>
-						<h1 className="ml-2">Sparrow</h1>
+						<h1 className="ml-2 texto-titulo">Sparrow</h1>
 					</div>
 				</div>
 			</div>

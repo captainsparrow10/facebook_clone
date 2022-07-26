@@ -5,22 +5,22 @@
 	/* Header */
 	@layer components {
 		.header {
-			@apply p-2 w-screen shadow-md;
+			@apply p-2 sm:p-3 xl:p-6 shadow-md sticky top-0 bg-white z-50;
 		}
 		.nav {
-			@apply flex justify-between w-full;
+			@apply flex justify-between;
 		}
 		.iconlist {
 			@apply flex justify-between items-center;
 		}
 		.icon {
-			@apply h-6 text-blue-500 sm:h-7;
+			@apply h-6 text-blue-500 sm:h-7 md:h-8 lg:h-9 xl:h-10;
 		}
 	}
 	/* Content */
 	@layer components {
 		.content {
-			@apply w-full mt-3;
+			@apply w-full md:w-[768px] mt-3 sm:mt-5 md:mt-7;
 		}
 		/* Send data */
 		@layer components {
@@ -37,9 +37,32 @@
 				@apply w-1/5 flex justify-center;
 			}
 		}
-		/* Stories */
+		/* texto */
 		@layer components {
-
+			.texto-generico {
+				@apply text-base md:text-lg;
+			}
+			.texto-titulo{
+				@apply text-lg md:text-xl
+			}
+			.boton-generico{
+				@apply w-2/3 bg-blue-400 rounded-full text-white p-2 text-sm sm:text-lg md:text-xl sm:p-1
+			}
+			.story-title{
+				@apply text-[20px] sm:text-[22px] md:text-[24px] 
+			}
+			.story-subtitle{
+				@apply text-[12px] sm:text-[14px] md:text-[16px] 
+			}
+		}
+		/* Responsive story */
+		@layer components{
+			.story{
+				@apply w-[130px] h-[200px] md:w-[160px] md:h-[250px]
+			}
+			.iconstory{
+				@apply w-[20px] h-[20px] md:w-[40px] md:h-[40px]
+			}
 		}
 	}
 }
