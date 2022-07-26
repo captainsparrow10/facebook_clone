@@ -9,6 +9,7 @@ export default function index() {
 			<Head>
 				<title>Facebook</title>
 				<link rel="shortcut icon" href="/facebook.ico"/>
+				<meta name="google-site-verification" content="sKR-FNlFAROcYXngJBHUpFSFCYwj1Xze-v5VfkpPJmE" />
 			</Head>
 			{/* Header */}
 			<Header />
