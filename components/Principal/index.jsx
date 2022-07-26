@@ -3,7 +3,7 @@ import { CameraIcon, VideoCameraIcon } from "@heroicons/react/solid";
 import Image from "next/image";
 import React from "react";
 import Published from "./Published";
-import Stories from "./stories";
+import Stories from "./Stories";
 
 export default function Content() {
 	return (
