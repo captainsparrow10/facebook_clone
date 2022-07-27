@@ -8,7 +8,10 @@ module.exports = {
 		extend: {
 			fontFamily: {
 				'sans': 'Helvetica, Arial, sans-serif',
-			}
+			},
+			animation: {
+        'spin-slow': 'spin 3s linear infinite',
+      }
 		},
 	},
 	plugins: [],

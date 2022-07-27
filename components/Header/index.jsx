@@ -1,16 +1,47 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 import React from "react";
 import { HomeIcon, MenuIcon, SearchIcon } from "@heroicons/react/solid";
 import {
 	BellIcon,
 	ChatIcon,
-	ChevronDownIcon,
 	CollectionIcon,
 	FilmIcon,
 	UsersIcon,
 	ViewGridAddIcon,
 } from "@heroicons/react/outline";
+import Link from "next/link";
 export default function Header() {
+	const router = useRouter();
+	console.log(router.route);
+	const rutas = [
+		{
+			href: "/",
+			icono: HomeIcon,
+			clase: "iconheader",
+		},
+		{
+			href: "/friends",
+			icono: UsersIcon,
+			clase: "iconheader",
+		},
+		{
+			href: "/watch",
+			icono: FilmIcon,
+			clase: "iconheader",
+		},
+		{
+			href: "/store",
+			icono: CollectionIcon,
+			clase: "iconheader",
+		},
+		{
+			href: "/gamer",
+			icono: MenuIcon,
+			clase: "iconheader",
+		},
+	];
+
 	return (
 		<div className="header">
 			<div className="nav">
@@ -27,7 +58,7 @@ export default function Header() {
 						/>
 					</div>
 					<div className="hidden sm:inline-flex items-center ">
-						<div className="relative w-[40px] h-[40px] xl:w-[50px] xl:h-[50px]">
+						<div className="imgicon">
 							<Image
 								className="rounded-full"
 								objectFit="cover"
@@ -36,32 +67,34 @@ export default function Header() {
 								alt="facebook logo"
 							/>
 						</div>
-
-						<SearchIcon className="icon ml-2" />
 					</div>
 				</div>
 				{/* Parte del centro */}
 				<div className="hidden iconlist sm:w:3/5 sm:inline-flex w-full">
-					<HomeIcon className="icon" />
-					<UsersIcon className="icon" />
-					<FilmIcon className="icon" />
-					<CollectionIcon className="icon" />
-					<MenuIcon className="icon" />
+					{rutas.map((ruta) => (
+						<Link href={ruta.href} key={ruta.href}>
+							<ruta.icono
+								className={`iconheader ${
+									router.pathname == ruta.href && "text-blue-500"
+								}`}
+							/>
+						</Link>
+					))}
 				</div>
 				{/* Iconos a la izquierda que desaparecen en sm*/}
 				<div className="justify-end flex items-center sm:w:1/5 w-full">
 					<div className="flex items-center sm:hidden">
-						<SearchIcon className="icon pr-3" />
-						<ChatIcon className="icon" />
+						<SearchIcon className="iconheader  pr-3" />
+						<ChatIcon className="iconheader " />
 					</div>
 					<div className="hidden sm:flex items-center">
 						<div className="hidden xl:flex items-center">
-							<ViewGridAddIcon className="icon mr-2" />
-							<ChatIcon className="icon  mr-2" />
-							<BellIcon className="icon  mr-2" />
+							<ViewGridAddIcon className="iconheader  mr-2" />
+							<ChatIcon className="iconheader   mr-2" />
+							<BellIcon className="iconheader   mr-2" />
 						</div>
 						<div className="flex items-center">
-							<div className="relative w-[40px] h-[40px] xl:w-[50px] xl:h-[50px]">
+							<div className="imgicon">
 								<Image
 									className="rounded-full"
 									objectFit="cover"
@@ -71,17 +104,20 @@ export default function Header() {
 								/>
 							</div>
 						</div>
-						<h1 className="ml-2 texto-titulo">Sparrow</h1>
 					</div>
 				</div>
 			</div>
 			{/* Iconos de abjo que desaparecen en sm*/}
 			<div className="iconlist sm:hidden">
-				<HomeIcon className="icon" />
-				<UsersIcon className="icon" />
-				<FilmIcon className="icon" />
-				<CollectionIcon className="icon" />
-				<MenuIcon className="icon" />
+				<Link href="/">
+					<HomeIcon className="iconheader " />
+				</Link>
+				<Link href="/friends">
+					<UsersIcon className="iconheader " />
+				</Link>
+				<FilmIcon className="iconheader " />
+				<CollectionIcon className="iconheader " />
+				<MenuIcon className="iconheader " />
 			</div>
 		</div>
 	);

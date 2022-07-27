@@ -1,7 +1,22 @@
-import '../styles/globals.css'
+import Head from "next/head";
+import Header from "../components/Header";
+import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+	return (
+		<>
+			<Head>
+				<title>Facebook</title>
+				<link rel="shortcut icon" href="/facebook.ico" />
+				<meta
+					name="google-site-verification"
+					content="sKR-FNlFAROcYXngJBHUpFSFCYwj1Xze-v5VfkpPJmE"
+				/>
+			</Head>
+			<Header />
+			<Component {...pageProps} />
+		</>
+	);
 }
 
-export default MyApp
+export default MyApp;
