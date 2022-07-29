@@ -14,8 +14,8 @@ export default function Published() {
 					/>
 				</div>
 				<div className="px-2">
-					<h1 className="texto-titulo font-bold">Sparrow</h1>
-					<h2 className="texto-generico text-gray-500">2h</h2>
+					<h3 className="texto-titulo font-bold">Sparrow</h3>
+					<p className="text-gray-500">2h</p>
 				</div>
 			</div>
 			<div className="px-2 text-justify py-1 texto-generico">

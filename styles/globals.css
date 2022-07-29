@@ -1,15 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @layer components {
-	/* Header */
-	@layer components {
-		.header {
-			@apply p-2 sm:p-3 xl:p-6 shadow-md sticky top-0 bg-white z-50;
+	@layer base {
+		h1 {
+			@apply text-xl;
 		}
-		.nav {
-			@apply flex justify-between;
+		h2 {
+			@apply text-2xl;
 		}
+		/* titulos normales */
+		h3 {
+			@apply text-lg md:text-xl;
+		}
+		/* Generico */
+		p {
+			@apply text-base md:text-lg;
+		}
+	}
+	/* Genericas */
+	@layer componnts {
 		.iconlist {
 			@apply flex justify-between items-center;
 		}
@@ -17,10 +28,25 @@
 			@apply h-6 text-blue-500 sm:h-7 md:h-8 lg:h-9 xl:h-10 cursor-pointer;
 		}
 		.iconheader {
-			@apply h-6 text-gray-500 sm:h-7 md:h-8 lg:h-9 xl:h-10 cursor-pointer hover:text-blue-500 ;
+			@apply h-6 text-gray-500 sm:h-7 md:h-8 lg:h-9 xl:h-10 cursor-pointer hover:text-blue-500;
 		}
-		.imgicon{
-			@apply relative w-[40px] h-[40px] xl:w-[50px] xl:h-[50px] cursor-pointer
+		.imgicon {
+			@apply relative w-[40px] h-[40px] xl:w-[50px] xl:h-[50px] cursor-pointer;
+		}
+		.story-title {
+			@apply text-[20px] sm:text-[22px] md:text-[24px];
+		}
+		.story-subtitle {
+			@apply text-[12px] sm:text-[14px] md:text-[16px];
+		}
+	}
+	/* Header */
+	@layer components {
+		.header {
+			@apply p-2 sm:p-3 xl:p-6 shadow-md sticky top-0 bg-white z-50;
+		}
+		.nav {
+			@apply flex justify-between;
 		}
 	}
 	/* Content */
@@ -42,35 +68,8 @@
 			.buttonsendbox {
 				@apply w-1/5 flex justify-center;
 			}
-		}
-		/* texto */
-		@layer components {
-			.texto-generico {
-				@apply text-base md:text-lg;
-			}
-			.texto-titulo {
-				@apply text-lg md:text-xl;
-			}
-			.boton-generico {
+			.buttonsend {
 				@apply w-2/3 bg-blue-400 rounded-full text-white p-2 text-sm sm:text-lg md:text-xl sm:p-1;
-			}
-			.story-title {
-				@apply text-[20px] sm:text-[22px] md:text-[24px];
-			}
-			.story-subtitle {
-				@apply text-[12px] sm:text-[14px] md:text-[16px];
-			}
-			.texto-lateral {
-				@apply text-lg text-gray-500 font-semibold ml-3;
-			}
-			.titulo-lateral{
-				@apply text-xl text-gray-400 font-semibold pointer-events-none
-			}
-			.hover-lateral{
-				@apply hover:bg-gray-200 rounded-3xl p-2 cursor-pointer
-			}
-			.friends-titulo{
-				@apply xl:text-4xl font-bold;
 			}
 		}
 		/* Responsive story */
@@ -82,11 +81,36 @@
 				@apply w-[20px] h-[20px] md:w-[40px] md:h-[40px];
 			}
 		}
+		/* Laterales */
+		@layer components {
+			.sidebar {
+				@apply flex my-2 items-center hover;
+			}
+			.titulo-lateral {
+				@apply text-gray-400 font-semibold pointer-events-none;
+			}
+			.texto-lateral {
+				@apply text-gray-500 font-semibold ml-3;
+			}
+			.hover {
+				@apply hover:bg-gray-200 rounded-3xl p-2 cursor-pointer;
+			}
+		}
 	}
-	/* Laterales */
+	/* Amigos */
 	@layer components {
-		.sidebar{
-			@apply flex my-2 items-center hover-lateral
+		/* mobile */
+		.friend-card-mobile{
+			@apply flex overflow-hidden shadow-md w-[385px] font-serif bg-white h-[100px] p-2 mb-2
+		}
+		.friend-card-desktop{
+			@apply flex-col  w-[250px] h-[400px] items-center p-0
+		}
+		.amigos-btn {
+			@apply w-full lg:w-4/5 text-white my-1 p-1  rounded-xl;
+		}
+		.friends-div {
+			@apply flex items-center hover:bg-gray-200  w-full rounded-3xl p-2 cursor-pointer;
 		}
 	}
 }

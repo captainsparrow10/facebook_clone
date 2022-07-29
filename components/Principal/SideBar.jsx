@@ -9,6 +9,28 @@ import {
 	ClockIcon,
 } from "@heroicons/react/outline";
 export default function SideBar() {
+	const rutas = [
+		{
+			icono: UsersIcon,
+			texto: "Buscar Amigos",
+		},
+		{
+			icono: UserGroupIcon,
+			texto: "Grupos",
+		},
+		{
+			icono: FilmIcon,
+			texto: "Watch",
+		},
+		{
+			icono: ClockIcon,
+			texto: "Recuerdos",
+		},
+		{
+			icono: ChevronDownIcon,
+			texto: "Ver mas",
+		},
+	];
 	return (
 		<div className="hidden xl:inline-block mt-6 ml-3">
 			{/*  Lista*/}
@@ -25,42 +47,20 @@ export default function SideBar() {
 							/>
 						</div>
 					</div>
-					<h1 className="texto-lateral">Sparrow</h1>
+					<h3 className="texto-lateral">Sparrow</h3>
 				</div>
-				<div className="sidebar">
-					<UsersIcon className="icon" />
-					<h1 className="texto-lateral">
-						Buscar Amigos
-					</h1>
-				</div>
-				<div className="sidebar">
-					<UserGroupIcon className="icon" />
-					<h1 className="texto-lateral">Grupos</h1>
-				</div>
-				<div className="sidebar">
-					<FilmIcon className="icon" />
-					<h1 className="texto-lateral">Watch</h1>
-				</div>
-				<div className="sidebar">
-					<ClockIcon className="icon" />
-					<h1 className="texto-lateral">
-						Recuerdos
-					</h1>
-				</div>
-				<div className="sidebar">
-					<ChevronDownIcon className="icon" />
-					<h1 className="texto-lateral">Ver mas</h1>
-				</div>
+				{rutas.map((ruta) => (
+					<div className="sidebar" key={ruta.texto}>
+						<ruta.icono className="icon" />
+						<h3 className="texto-lateral">{ruta.texto}</h3>
+					</div>
+				))}
 			</div>
 			<div>
-				<h1 className="titulo-lateral border-t py-3">
-					Tus accesos directos
-				</h1>
+				<h2 className="titulo-lateral border-t py-3">Tus accesos directos</h2>
 				<div className="sidebar">
 					<SearchIcon className="icon" />
-					<h1 className="hidden xl:flex texto-lateral">
-						Buscar grupos
-					</h1>
+					<h3 className="hidden xl:flex texto-lateral">Buscar grupos</h3>
 				</div>
 			</div>
 		</div>

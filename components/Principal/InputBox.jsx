@@ -23,25 +23,25 @@ export default function InputBox() {
 					placeholder="What's on your mind?"
 				/>
 				<div className="buttonsendbox">
-					<button className="boton-generico">Post</button>
+					<button className="buttonsend">Post</button>
 				</div>
 			</div>
 			<div className="hidden sm:flex items-center justify-evenly mt-5 pt-3 border-t">
 				<div className="flex items-center cursor-pointer hover:drop-shadow-2xl hover:rounder-full p-2 md:flex-col lg:inline-flex">
 					<VideoCameraIcon className="icon text-red-500" />
-					<p className="mt-1 ml-1 text-black hidden md:inline-flex texto-generico">
+					<p className="mt-1 ml-1 text-black hidden md:inline-flex">
 						Live Video
 					</p>
 				</div>
 				<div className="flex items-center cursor-pointer hover:drop-shadow-2xl hover:rounder-full p-2 md:flex-col">
 					<CameraIcon className="icon text-green-500" />
-					<p className="mt-1 ml-1 text-black hidden md:inline-flex texto-generico">
+					<p className="mt-1 ml-1 text-black hidden md:inline-flex">
 						Photo/video
 					</p>
 				</div>
 				<div className="flex items-center cursor-pointer hover:drop-shadow-2xl hover:rounder-full p-2 md:flex-col">
 					<EmojiHappyIcon className="icon text-yellow-500" />
-					<p className="mt-1 ml-1 text-black hidden md:inline-flex texto-generico">
+					<p className="mt-1 ml-1 text-black hidden md:inline-flex">
 						Feeling Activity
 					</p>
 				</div>

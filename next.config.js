@@ -1,7 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: false,
-  swcMinify: true,
-}
+	reactStrictMode: false,
+	swcMinify: true,
+	images: {
+		domains: ["randomuser.me"],
+		formats: ["image/webp", "image/avif" ],
+	},
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

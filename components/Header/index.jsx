@@ -109,15 +109,15 @@ export default function Header() {
 			</div>
 			{/* Iconos de abjo que desaparecen en sm*/}
 			<div className="iconlist sm:hidden">
-				<Link href="/">
-					<HomeIcon className="iconheader " />
-				</Link>
-				<Link href="/friends">
-					<UsersIcon className="iconheader " />
-				</Link>
-				<FilmIcon className="iconheader " />
-				<CollectionIcon className="iconheader " />
-				<MenuIcon className="iconheader " />
+				{rutas.map((ruta) => (
+					<Link href={ruta.href} key={ruta.href}>
+						<ruta.icono
+							className={`iconheader ${
+								router.pathname == ruta.href && "text-blue-500"
+							}`}
+						/>
+					</Link>
+				))}
 			</div>
 		</div>
 	);

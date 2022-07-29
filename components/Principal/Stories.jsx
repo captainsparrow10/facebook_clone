@@ -5,7 +5,7 @@ import { datas } from "./data";
 export default function Stories() {
 	return (
 		<div className="flex flex-col w-full my-3 shadow-md p-2">
-			<div className="mt-5 flex overflow-hidden">
+			<div className="flex overflow-hidden">
 				{datas.map((data) => (
 					<div className="flex mr-2 " key={data.img}>
 						<div className="relative story rounded-3xl overflow-hidden">
@@ -25,11 +25,8 @@ export default function Stories() {
 									alt={"imagen"}
 								/>
 							</div>
-							<div className="absolute right-1 bottom-1 text-white">
-								<h5 className="story-title font-bold">{data.name}</h5>
-								<p className="story-subtitle font-semibold border-black">
-									{data.city}
-								</p>
+							<div className="absolute right-5 bottom-1 text-white">
+								<h3 className="story-title font-bold">{data.name}</h3>
 							</div>
 						</div>
 					</div>
