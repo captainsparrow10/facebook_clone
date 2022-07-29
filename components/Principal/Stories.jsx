@@ -1,11 +1,10 @@
 import Image from "next/image";
 import React from "react";
 import { datas } from "./data";
-
 export default function Stories() {
 	return (
-		<div className="flex flex-col w-full my-3 shadow-md p-2">
-			<div className="flex overflow-hidden">
+		<div className="w-full my-3  p-2 relative overflow-hidden">
+			<div className="flex overflow-hidden overflow-x-auto scrollbar-hide">
 				{datas.map((data) => (
 					<div className="flex mr-2 " key={data.img}>
 						<div className="relative story rounded-3xl overflow-hidden">

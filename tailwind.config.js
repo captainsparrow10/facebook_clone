@@ -7,12 +7,12 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				'sans': 'Helvetica, Arial, sans-serif',
+				sans: "Helvetica, Arial, sans-serif",
 			},
 			animation: {
-        'spin-slow': 'spin 3s linear infinite',
-      }
+				"spin-slow": "spin 3s linear infinite",
+			},
 		},
 	},
-	plugins: [],
+	plugins: [require("tailwind-scrollbar-hide")],
 };
