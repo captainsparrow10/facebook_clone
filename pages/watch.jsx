@@ -1,5 +1,5 @@
 import React from "react";
-import SideBarWatch from "../components/watch/SideBar";
+import SideBarWatch from "../components/watch/WatchSB";
 import Videos from "../components/watch/Videos";
 export default function watch() {
 	return (

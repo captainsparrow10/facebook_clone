@@ -1,6 +1,6 @@
 import React from "react";
 import Shop from "../components/store/Shop";
-import SideBarShop from "../components/store/SideBar";
+import SideBarShop from "../components/store/StoreSB";
 
 export default function store() {
 	return (

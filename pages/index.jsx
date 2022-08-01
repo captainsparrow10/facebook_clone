@@ -1,8 +1,7 @@
-import Head from "next/head";
 import React from "react";
-import Content from "../components/Principal";
-import SideBar from "../components/Principal/SideBar";
-import Contacts from "../components/Principal/Contacts";
+import Content from "../components/principal";
+import SideBar from "../components/principal/SideBar";
+import Contacts from "../components/principal/Contacts";
 export default function index() {
 	return (
 		<>
@@ -10,7 +9,7 @@ export default function index() {
 				{/* SideBar aparece en full screen*/}
 				<SideBar />
 				{/* Principal content */}
-				<Content  />
+				<Content />
 				{/* Contacts and Widgets  cuando esta en 1024 */}
 				<Contacts />
 			</main>
