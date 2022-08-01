@@ -2,16 +2,16 @@ import Image from "next/image";
 import React, { useState } from "react";
 
 export default function Videos() {
-	const [anime, setAnime] = useState([]);
-	async function fetchData() {
-		const dataApi = await fetch("https://api.jikan.moe/v4/anime")
-			.then((response) => response.json())
-			.then((json) => json.data);
-		setAnime(dataApi);
-	}
-	useEffect(() => {
-		fetchData();
-	}, []);
+	// const [anime, setAnime] = useState([]);
+	// async function fetchData() {
+	// 	const dataApi = await fetch("https://api.jikan.moe/v4/anime")
+	// 		.then((response) => response.json())
+	// 		.then((json) => json.data);
+	// 	setAnime(dataApi);
+	// }
+	// useEffect(() => {
+	// 	fetchData();
+	// }, []);
 	return (
 		<div className="mt-3 w-full p-5 lg:p-0 sm:w-4/6 lg:w-5/6  flex flex-col items-center">
 			<div className="lg:w-[768px]">

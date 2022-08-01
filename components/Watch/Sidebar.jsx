@@ -5,20 +5,19 @@ import {
 	VideoCameraIcon,
 	PlayIcon,
 	DesktopComputerIcon,
-	SearchIcon,
 } from "@heroicons/react/outline";
 
 export default function SideBar() {
 	const rutas = [
 		{
 			titulo: "Inicio",
-			icono: PlayIcon,
+			icono: VideoCameraIcon,
 			clase: "friends-div bg-gray-200 ",
 			claseicono: "icon",
 		},
 		{
 			titulo: "En vivo",
-			icono: VideoCameraIcon,
+			icono: PlayIcon,
 			clase: "friends-div",
 			claseicono: "iconheader hover:text-gray-500",
 		},

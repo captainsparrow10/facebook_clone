@@ -5,10 +5,9 @@ import { HomeIcon, SearchIcon } from "@heroicons/react/solid";
 import {
 	BellIcon,
 	ChatIcon,
-	CodeIcon,
-	CollectionIcon,
-	FilmIcon,
+	ShoppingCartIcon,
 	UsersIcon,
+	VideoCameraIcon,
 	ViewGridAddIcon,
 } from "@heroicons/react/outline";
 import Link from "next/link";
@@ -28,12 +27,12 @@ export default function Header() {
 		},
 		{
 			href: "/watch",
-			icono: FilmIcon,
+			icono: VideoCameraIcon,
 			clase: "iconheader",
 		},
 		{
 			href: "/store",
-			icono: CollectionIcon,
+			icono: ShoppingCartIcon,
 			clase: "iconheader",
 		},
 	];
