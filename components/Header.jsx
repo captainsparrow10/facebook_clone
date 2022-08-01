@@ -45,7 +45,7 @@ export default function Header() {
 					{/* Iconos a la izquierda que desaparecen en sm*/}
 					<div className="sm:hidden">
 						<Image
-							src={require("../assets/img/facebook-mobile.png")}
+							src={require("./assets/img/facebook-mobile.png")}
 							width={80}
 							height={40}
 							layout="fixed"
