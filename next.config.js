@@ -3,7 +3,7 @@ const nextConfig = {
 	reactStrictMode: false,
 	swcMinify: true,
 	images: {
-		domains: ["randomuser.me"],
+		domains: ["randomuser.me", "fdn2.gsmarena.com"],
 		formats: ["image/webp", "image/avif" ],
 	},
 };

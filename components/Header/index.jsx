@@ -1,10 +1,11 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
 import React from "react";
-import { HomeIcon, MenuIcon, SearchIcon } from "@heroicons/react/solid";
+import { HomeIcon, SearchIcon } from "@heroicons/react/solid";
 import {
 	BellIcon,
 	ChatIcon,
+	CodeIcon,
 	CollectionIcon,
 	FilmIcon,
 	UsersIcon,
@@ -33,11 +34,6 @@ export default function Header() {
 		{
 			href: "/store",
 			icono: CollectionIcon,
-			clase: "iconheader",
-		},
-		{
-			href: "/gamer",
-			icono: MenuIcon,
 			clase: "iconheader",
 		},
 	];

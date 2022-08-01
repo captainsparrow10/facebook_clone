@@ -2,13 +2,8 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 export default function Personas() {
-	const [anime, setAnime] = useState([]);
 	const [personas, setPersonas] = useState([]);
 	async function fetchData() {
-		const dataApi = await fetch("https://api.jikan.moe/v4/anime")
-			.then((response) => response.json())
-			.then((json) => json.data);
-		setAnime(dataApi);
 		const personas = await fetch("https://randomuser.me/api/?results=10")
 			.then((response) => response.json())
 			.then(function (data) {
