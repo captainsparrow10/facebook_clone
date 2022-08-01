@@ -1,9 +1,11 @@
-import React from 'react'
-import Watch from "../components/Watch"
+import React from "react";
+import SideBarWatch from "../components/Watch/SideBar";
+import Videos from "../components/Watch/Videos";
 export default function watch() {
-  return (
-    <>
-      <Watch />
-    </>
-  )
+	return (
+		<div className="flex w-full mt-4">
+			<SideBarWatch />
+			<Videos />
+		</div>
+	);
 }

@@ -1,9 +1,12 @@
 import React from "react";
-import Store from "../components/Store/";
+import Shop from "../components/Store/Shop";
+import SideBarShop from "../components/Store/SideBar";
+
 export default function store() {
 	return (
-		<>
-			<Store />
-		</>
+		<div className="flex w-full mt-4">
+			<SideBarShop />
+			<Shop />
+		</div>
 	);
 }

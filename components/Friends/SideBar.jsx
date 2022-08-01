@@ -7,7 +7,7 @@ import {
 } from "@heroicons/react/outline";
 import React from "react";
 
-export default function SideBar() {
+export default function SideBarFriends() {
 	const rutas = [
 		{
 			titulo: "Inicio",

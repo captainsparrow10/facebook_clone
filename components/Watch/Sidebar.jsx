@@ -7,7 +7,7 @@ import {
 	DesktopComputerIcon,
 } from "@heroicons/react/outline";
 
-export default function SideBar() {
+export default function SideBarWatch() {
 	const rutas = [
 		{
 			titulo: "Inicio",
