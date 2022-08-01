@@ -1,7 +1,7 @@
 import React from "react";
-import Content from "../components/principal";
-import SideBar from "../components/principal/SideBar";
-import Contacts from "../components/principal/Contacts";
+import Content from "../components/principal/index.jsx";
+import SideBar from "../components/principal/SideBar.jsx";
+import Contacts from "../components/principal/Contacts.jsx";
 export default function index() {
 	return (
 		<>
