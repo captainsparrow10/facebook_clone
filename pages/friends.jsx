@@ -1,6 +1,6 @@
 import React from "react";
-import Personas from "../components/Friends/Personas";
-import SideBarFriends from "../components/Friends/SideBar";
+import Personas from "../components/friends/Personas";
+import SideBarFriends from "../components/friends/SideBar";
 
 export default function friends() {
 	return (
