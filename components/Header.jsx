@@ -57,7 +57,7 @@ export default function Header() {
 							<Image
 								className="rounded-full"
 								objectFit="cover"
-								src={require("../assets/img/facebook.png")}
+								src={require("./assets/img/facebook.png")}
 								layout="fill"
 								alt="facebook logo"
 							/>
@@ -93,7 +93,7 @@ export default function Header() {
 								<Image
 									className="rounded-full"
 									objectFit="cover"
-									src={require("../assets/img/facebook-profile.jpg")}
+									src={require("./assets/img/facebook-profile.jpg")}
 									layout="fill"
 									alt="facebook logo"
 								/>
