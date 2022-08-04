@@ -33,3 +33,8 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 # facebook_clone
+Facebook is a type of social media. I loved it because I always spend my time there viewing memes. When I needed to learn about Nextjs and Tailwind CSS, I had an idea: "Try to clone." So this is the motivation for how I will act in this project. I know, it's not the best clone, but I need it.
+I learned about Next.js, React.Js, Router, SSR, etc. In tailwind: color, typography, alignment, display, transition and features.
+ 
+I started to build the mobile design, using, as an example, my Facebook on my phone. The desktop design, using my Facebook desktop.
+ 
