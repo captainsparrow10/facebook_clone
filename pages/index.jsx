@@ -5,7 +5,7 @@ import Contacts from "../components/Principal/Contacts";
 export default function index() {
 	return (
 		<>
-			<main className="flex justify-center xl:justify-between">
+			<main className="flex justify-center xl:justify-between bg-gray-100">
 				{/* SideBar aparece en full screen*/}
 				<SideBar />
 				{/* Principal content */}

@@ -8,11 +8,11 @@
 			@apply text-xl;
 		}
 		h2 {
-			@apply text-2xl;
+			@apply text-lg;
 		}
 		/* titulos normales */
 		h3 {
-			@apply text-lg md:text-xl;
+			@apply text-sm;
 		}
 		/* Generico */
 		p {
@@ -22,16 +22,16 @@
 	/* Genericas */
 	@layer componnts {
 		.iconlist {
-			@apply flex justify-between items-center;
+			@apply flex justify-evenly items-center;
 		}
 		.icon {
 			@apply h-6 text-blue-500 sm:h-7 md:h-8 lg:h-9 xl:h-10 cursor-pointer;
 		}
 		.iconheader {
-			@apply h-6 text-gray-500 sm:h-7 md:h-8 lg:h-9 xl:h-10 cursor-pointer hover:text-blue-500;
+			@apply w-6 h-6 text-gray-500 sm:w-7 sm:h-7 cursor-pointer m-2;
 		}
 		.imgicon {
-			@apply relative w-[40px] h-[40px] xl:w-[50px] xl:h-[50px] cursor-pointer;
+			@apply relative w-[30px] h-[30px] xl:w-[40px] xl:h-[40px] cursor-pointer;
 		}
 		.story-title {
 			@apply text-[20px] sm:text-[22px] md:text-[24px];
@@ -43,10 +43,10 @@
 	/* Header */
 	@layer components {
 		.header {
-			@apply p-2 sm:p-3 xl:p-6 shadow-md sticky top-0 bg-white z-50;
+			@apply  shadow-md sticky top-0 bg-white z-50;
 		}
 		.nav {
-			@apply flex justify-between;
+			@apply flex justify-evenly;
 		}
 	}
 	/* Content */
