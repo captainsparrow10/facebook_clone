@@ -8,6 +8,7 @@ export default function Personas() {
 		/* 
 			Hacer dos if uno para almacenar en el local store y otro para que lo llame si no hay nada 
 			o un useMemo
+			https://www.youtube.com/watch?v=THL1OPn72vo&ab_channel=WebDevSimplified
 		*/
 		await fetch("https://randomuser.me/api/?results=18")
 			.then((response) => response.json())
@@ -22,6 +23,7 @@ export default function Personas() {
 		let data = localStorage.getItem("amigos");
 		if (data) {
 			setPersonas(JSON.parse(data));
+			setLoading(true);
 		}else{
 			fetchData()
 		}
