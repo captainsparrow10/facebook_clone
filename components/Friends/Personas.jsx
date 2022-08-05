@@ -5,18 +5,31 @@ export default function Personas() {
 	const [personas, setPersonas] = useState([]);
 	const [loading, setLoading] = useState(false);
 	async function fetchData() {
-		const personas = await fetch("https://randomuser.me/api/?results=18")
+		/* 
+			Hacer dos if uno para almacenar en el local store y otro para que lo llame si no hay nada 
+			o un useMemo
+		*/
+		await fetch("https://randomuser.me/api/?results=18")
 			.then((response) => response.json())
-			.then(function (data) {
+			.then((data) => {
+				setLoading(true);
 				setPersonas(data["results"]);
 			});
 	}
-	setTimeout(() => {
-		setLoading(true);
-	}, 500);
+
+	
 	useEffect(() => {
-		fetchData();
+		let data = localStorage.getItem("amigos");
+		if (data) {
+			setPersonas(JSON.parse(data));
+		}else{
+			fetchData()
+		}
 	}, []);
+
+	useEffect(() => {
+		localStorage.setItem("amigos", JSON.stringify(personas));
+	}, [personas]);
 
 	return (
 		<div className="w-full sm:w-4/6 lg:w-5/6 flex justify-center">
