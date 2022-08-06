@@ -1,7 +1,12 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
 import React from "react";
-import { AiFillHome, AiOutlineSearch } from "react-icons/ai";
+import {
+	AiFillHome,
+	AiOutlineSearch,
+	AiOutlinePlus,
+	AiOutlineMenu,
+} from "react-icons/ai";
 import { FaUserFriends, FaFacebookMessenger } from "react-icons/fa";
 import {
 	BsDisplay,
@@ -14,98 +19,103 @@ import { SiFacebookgaming } from "react-icons/si";
 import Link from "next/link";
 export default function Header() {
 	const router = useRouter();
-	console.log(router.route);
 	const rutas = [
 		{
 			href: "/",
 			icono: AiFillHome,
-			clase: "iconheader",
 		},
 		{
 			href: "/friends",
 			icono: FaUserFriends,
-			clase: "iconheader",
 		},
 		{
 			href: "/watch",
 			icono: BsDisplay,
-			clase: "iconheader",
 		},
 		{
 			href: "/store",
 			icono: TbBuildingStore,
-			clase: "iconheader",
-		},
-		{
-			href: "/gaming",
-			icono: SiFacebookgaming,
-			clase: "iconheader",
 		},
 	];
 
 	return (
 		<div className="header">
 			<div className="nav">
-				{/* Icono de facebook */}
-				<div className="flex items-center sm:w:1/5 w-full">
-					{/* Iconos a la izquierda que desaparecen en sm*/}
-					<div className="sm:hidden pl-3">
-						<Image
-							src={require("./assets/img/facebook-mobile.png")}
-							width={80}
-							height={40}
-							layout="fixed"
-							alt="facebook logo"
-						/>
-					</div>
-					<div className="hidden sm:inline-flex items-center pl-6">
-						<BsFacebook className="cursor-pointer  text-blue-500 w-10 h-10" />
+				{/* Parte lateral izquierda */}
+				<div className="w-full sm:w-1/6 ">
+					<div className="flex items-center">
+						<div className="flex items-center ml-5 mr-2">
+							<BsFacebook className="cursor-pointer  text-blue-500 w-10 h-10" />
+						</div>
+						<div className="bg-gray-100 rounded-full hover:bg-gray-300 xl:flex">
+							<AiOutlineSearch className="iconheader-lateral" />
+							<input type="text" placeholder="Buscar en facebook" className="bg-gray-100 rounded-full hover:bg-gray-300 border-0 outline-none xl:inline-flex hidden" />
+						</div>
 					</div>
 				</div>
 				{/* Parte del centro */}
-				<div className="hidden iconlist sm:w:3/5 sm:inline-flex w-full">
-					{rutas.map((ruta) => (
-						<Link href={ruta.href} key={ruta.href}>
+				<div className="sm:w-4/6  w-full flex justify-center">
+					<div className="iconlist w-4/6 ">
+						{rutas.map((ruta) => (
+							<Link href={ruta.href} key={ruta.href}>
+								<div
+									className={`h-full w-full p-1 hidden sm:inline-flex ${
+										router.pathname == ruta.href && "border-b-2 border-blue-500"
+									}`}
+								>
+									<div
+										className={`h-full items-center flex w-full justify-center hover:bg-gray-100 rounded-md" ${
+											router.pathname == ruta.href && "hover:bg-white"
+										}`}
+									>
+										<ruta.icono
+											className={`iconheader ${
+												router.pathname == ruta.href && "text-blue-500"
+											}`}
+										/>
+									</div>
+								</div>
+							</Link>
+						))}
+						<div className="h-full w-full p-1 xl:hidden">
+							<AiOutlineMenu className="iconheader" />
+						</div>
+						<Link href="/gaming">
 							<div
-								className={`h-full w-full p-1 ${
-									router.pathname == ruta.href && "border-b-2 border-blue-500"
+								className={`h-full w-full p-1 hidden xl:inline-flex ${
+									router.pathname == "/gaming" && "border-b-2 border-blue-500"
 								}`}
 							>
 								<div
 									className={`h-full items-center flex w-full justify-center hover:bg-gray-100 rounded-md" ${
-										router.pathname == ruta.href && "hover:bg-white"
+										router.pathname == "/gaming" && "hover:bg-white"
 									}`}
 								>
-									<ruta.icono
+									<SiFacebookgaming
 										className={`iconheader ${
-											router.pathname == ruta.href && "text-blue-500"
+											router.pathname == "/gaming" && "text-blue-500"
 										}`}
 									/>
 								</div>
 							</div>
 						</Link>
-					))}
+					</div>
 				</div>
 				{/* Iconos a la izquierda que desaparecen en sm*/}
-				<div className="justify-end flex items-center sm:w:1/5 w-full">
-					<div className="flex items-center sm:hidden">
-						<div className="bg-gray-100 rounded-full hover:bg-gray-300  mr-2">
-							<AiOutlineSearch className="iconheader   text-gray-800" />
-						</div>
-						<div className="bg-gray-100 rounded-full hover:bg-gray-300  mr-2">
-							<FaFacebookMessenger className="iconheader  text-gray-800  " />
-						</div>
-					</div>
-					<div className="hidden sm:flex items-center">
-						<div className="hidden xl:flex items-center">
-							<div className="bg-gray-100 rounded-full hover:bg-gray-300 mr-2">
-								<BsFillGrid3X3GapFill className="iconheader text-gray-800 " />
+				<div className="justify-end flex items-center sm:w-1/6 w-full">
+					<div className="flex items-center">
+						<div className="flex items-center">
+							<div className="bg-gray-100 rounded-full hover:bg-gray-300 mr-2 lg:inline-flex hidden">
+								<BsFillGrid3X3GapFill className="iconheader-lateral" />
+							</div>
+							<div className="bg-gray-100 rounded-full hover:bg-gray-300 mr-2 lg:hidden ">
+								<AiOutlinePlus className="iconheader-lateral" />
 							</div>
 							<div className="bg-gray-100 rounded-full hover:bg-gray-300  mr-2">
-								<FaFacebookMessenger className="iconheader  text-gray-800  " />
+								<FaFacebookMessenger className="iconheader-lateral" />
 							</div>
 							<div className="bg-gray-100 rounded-full hover:bg-gray-300 mr-2">
-								<BsBellFill className="iconheader  text-gray-800  " />
+								<BsBellFill className="iconheader-lateral" />
 							</div>
 						</div>
 						<div className="flex items-center">
@@ -121,30 +131,6 @@ export default function Header() {
 						</div>
 					</div>
 				</div>
-			</div>
-			{/* Iconos de abjo que desaparecen en sm*/}
-			<div className="iconlist sm:hidden">
-				{rutas.map((ruta) => (
-					<Link href={ruta.href} key={ruta.href}>
-						<div
-							className={`h-full w-full p-1 ${
-								router.pathname == ruta.href && "border-b-2 border-blue-500"
-							}`}
-						>
-							<div
-								className={`h-full items-center flex w-full justify-center hover:bg-gray-100 rounded-md" ${
-									router.pathname == ruta.href && "hover:bg-white"
-								}`}
-							>
-								<ruta.icono
-									className={`iconheader ${
-										router.pathname == ruta.href && "text-blue-500"
-									}`}
-								/>
-							</div>
-						</div>
-					</Link>
-				))}
 			</div>
 		</div>
 	);

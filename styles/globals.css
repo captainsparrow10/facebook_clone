@@ -28,10 +28,13 @@
 			@apply h-6 text-blue-500 sm:h-7 md:h-8 lg:h-9 xl:h-10 cursor-pointer;
 		}
 		.iconheader {
-			@apply w-6 h-6 text-gray-500 sm:w-7 sm:h-7 cursor-pointer m-2;
+			@apply w-7 h-7  text-gray-500 cursor-pointer m-2;
+		}
+		.iconheader-lateral{
+			@apply w-5 h-5 text-gray-800 cursor-pointer m-2;
 		}
 		.imgicon {
-			@apply relative w-[30px] h-[30px] xl:w-[40px] xl:h-[40px] cursor-pointer;
+			@apply relative w-[40px] h-[40px] cursor-pointer;
 		}
 		.story-title {
 			@apply text-[20px] sm:text-[22px] md:text-[24px];
@@ -43,10 +46,10 @@
 	/* Header */
 	@layer components {
 		.header {
-			@apply  shadow-md sticky top-0 bg-white z-50;
+			@apply  shadow-md sticky top-0 bg-white z-50 h-14 w-full;
 		}
 		.nav {
-			@apply flex justify-evenly;
+			@apply flex justify-evenly items-center h-full w-full;
 		}
 	}
 	/* Content */
