@@ -1,38 +1,11 @@
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { AiOutlineLoading } from "react-icons/ai";
+import { v4 } from "uuid";
+import useSWR from 'swr'
 export default function Personas() {
-	const [personas, setPersonas] = useState([]);
-	const [loading, setLoading] = useState(false);
-	async function fetchData() {
-		/* 
-			Hacer dos if uno para almacenar en el local store y otro para que lo llame si no hay nada 
-			o un useMemo
-			https://www.youtube.com/watch?v=THL1OPn72vo&ab_channel=WebDevSimplified
-		*/
-		await fetch("https://randomuser.me/api/?results=18")
-			.then((response) => response.json())
-			.then((data) => {
-				setLoading(true);
-				setPersonas(data["results"]);
-			});
-	}
-
-	
-	useEffect(() => {
-		let data = localStorage.getItem("amigos");
-		if (data) {
-			setPersonas(JSON.parse(data));
-			setLoading(true);
-		}else{
-			fetchData()
-		}
-	}, []);
-
-	useEffect(() => {
-		localStorage.setItem("amigos", JSON.stringify(personas));
-	}, [personas]);
-
+	const fetcher = (...args) => fetch(...args).then((res) => res.json()).then((data) => data["results"]);
+	const { data, error } = useSWR("https://randomuser.me/api/?results=18", fetcher);
 	return (
 		<div className="w-full sm:w-4/6 lg:w-5/6 flex justify-center">
 			<div className="p-5 w-full ml-2">
@@ -40,11 +13,11 @@ export default function Personas() {
 					Personas que quizá conozcas
 				</h2>
 				<div className="flex items-center flex-grow flex-wrap justify-evenly">
-					{loading ? (
-						personas.map((data) => (
+					{data ? (
+						data.map((data) => (
 							<div
 								className="friend-card-mobile lg:friend-card-desktop"
-								key={data.picture.medium}
+								key={v4()}
 							>
 								<div className="relative w-[80px] h-[80px] lg:w-full lg:h-2/3">
 									<Image
