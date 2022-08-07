@@ -4,8 +4,8 @@ import { datas } from "./data";
 import { PlusCircleIcon } from "@heroicons/react/outline";
 export default function Contacts() {
 	return (
-		<div className="hidden lg:inline-block  fixed   top-20 right-0 w-1/6 h-screen overflow-y-hidden">
-			<div className=" h-4/6 hover:overflow-y-scroll overflow-hidden">
+		<div className="hidden lg:inline-block fixed top-20 right-0 w-1/6 h-screen overflow-y-hidden">
+			<div className=" h-[80%] hover:overflow-y-scroll overflow-hidden">
 				<h2 className="titulo-lateral pr-4 border-b py-3">Publicidad</h2>
 				<div className="flex flex-col">
 					<h2 className="titulo-lateral border-t pr-4 py-3 ">Contactos</h2>

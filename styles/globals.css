@@ -27,6 +27,9 @@
 		.icon {
 			@apply h-6 text-blue-500 sm:h-7 md:h-8 lg:h-9 xl:h-10 cursor-pointer;
 		}
+		.icon-lateral{
+			@apply h-6 w-6 cursor-pointer text-blue-500
+		}
 		.iconheader {
 			@apply w-7 h-7  text-gray-500 cursor-pointer m-2;
 		}
@@ -55,7 +58,7 @@
 	/* Content */
 	@layer components {
 		.content {
-			@apply w-full md:w-2/3 sm:w-5/6;
+			@apply w-full md:w-1/2 sm:w-5/6;
 		}
 		/* Send data */
 		@layer components {
