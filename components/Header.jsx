@@ -3,13 +3,10 @@ import React from "react";
 import { AiOutlineSearch, AiOutlineMenu } from "react-icons/ai";
 import { BsFacebook } from "react-icons/bs";
 import Link from "next/link";
-import { HeaderImg } from "./assets/imgs";
-import { headerIcon, headerLateralIcon } from "./assets/icons";
+import { ImgProfile } from "./assets/const/functions";
+import { headerIcon, headerLateralIcon } from "./assets/const/icons";
 export default function Header() {
 	const router = useRouter();
-
-	// map
-
 	return (
 		<div className="header">
 			<div className="nav">
@@ -30,18 +27,18 @@ export default function Header() {
 					</div>
 				</div>
 				{/* Parte del centro */}
-				<div className="sm:w-4/6  w-full flex justify-center">
-					<div className="iconlist w-4/6 ">
+				<div className="sm:w-4/6  w-full flex justify-center h-full">
+					<div className="flex justify-evenly items-center w-4/6 ">
 						{headerIcon.map((ruta) => (
 							<Link href={ruta.href} key={ruta.href}>
 								<div
-									className={`h-full w-full p-1 hidden ${ruta.display} ${
-										router.pathname == ruta.href && "border-b-2 border-blue-500"
+									className={`h-full w-full p-1 hidden  ${ruta.display} ${
+										router.pathname == ruta.href && "p-0"
 									}`}
 								>
 									<div
-										className={`h-full items-center flex w-full justify-center hover:bg-gray-100 rounded-md" ${
-											router.pathname == ruta.href && "hover:bg-white"
+										className={`h-full items-center flex w-[95%] justify-center hover:bg-gray-100 rounded-lg overflow-hidden" ${
+											router.pathname == ruta.href && "hover:bg-white border-b-4 border-blue-500 rounded-none"
 										}`}
 									>
 										<ruta.icono
@@ -71,8 +68,8 @@ export default function Header() {
 								</div>
 							))}
 						</div>
-						<div className="flex items-center">
-							<HeaderImg />
+						<div className="flex items-center mr-2">
+							<ImgProfile />
 						</div>
 					</div>
 				</div>

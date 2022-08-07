@@ -21,29 +21,17 @@
 	}
 	/* Genericas */
 	@layer componnts {
-		.iconlist {
-			@apply flex justify-evenly items-center;
-		}
 		.icon {
 			@apply h-6 text-blue-500 sm:h-7 md:h-8 lg:h-9 xl:h-10 cursor-pointer;
 		}
 		.icon-lateral{
-			@apply h-6 w-6 cursor-pointer text-blue-500
+			@apply h-8 w-8 cursor-pointer text-blue-500
 		}
 		.iconheader {
-			@apply w-7 h-7  text-gray-500 cursor-pointer m-2;
+			@apply w-7 h-7  text-gray-400 cursor-pointer m-2;
 		}
 		.iconheader-lateral{
-			@apply w-5 h-5 text-gray-800 cursor-pointer m-2;
-		}
-		.imgicon {
-			@apply relative w-[40px] h-[40px] cursor-pointer;
-		}
-		.story-title {
-			@apply text-[20px] sm:text-[22px] md:text-[24px];
-		}
-		.story-subtitle {
-			@apply text-[12px] sm:text-[14px] md:text-[16px];
+			@apply w-6 h-6 text-gray-800 cursor-pointer m-2;
 		}
 	}
 	/* Header */
@@ -58,7 +46,7 @@
 	/* Content */
 	@layer components {
 		.content {
-			@apply w-full md:w-1/2 sm:w-5/6;
+			@apply w-full md:w-1/2 sm:w-5/6 mt-6;
 		}
 		/* Send data */
 		@layer components {
@@ -66,25 +54,13 @@
 				@apply flex justify-between w-full items-center;
 			}
 			.imgsendbox {
-				@apply flex justify-center w-1/5;
+				@apply flex justify-center w-[10%];
 			}
 			.inputsendbox {
-				@apply w-3/5 rounded-full bg-blue-100 px-2 py-1 sm:py-2 flex justify-center;
+				@apply w-[90%] rounded-full bg-blue-100 px-2 py-1 sm:py-2 flex justify-center;
 			}
 			.buttonsendbox {
-				@apply w-1/5 flex justify-center;
-			}
-			.buttonsend {
-				@apply w-2/3 bg-blue-400 rounded-full text-white p-2 text-sm sm:text-lg md:text-xl sm:p-1;
-			}
-		}
-		/* Responsive story */
-		@layer components {
-			.story {
-				@apply w-[130px] h-[200px] md:w-[160px] md:h-[250px] lg:w-[200px] lg:h-[350px];
-			}
-			.iconstory {
-				@apply w-[20px] h-[20px] md:w-[40px] md:h-[40px];
+				@apply w-1/6 flex justify-center;
 			}
 		}
 		/* Laterales */
@@ -99,7 +75,7 @@
 				@apply text-gray-500 font-semibold ml-3;
 			}
 			.hover {
-				@apply hover:bg-gray-200 rounded-3xl p-2 cursor-pointer;
+				@apply hover:bg-gray-200 rounded-xl p-2 cursor-pointer;
 			}
 		}
 	}
