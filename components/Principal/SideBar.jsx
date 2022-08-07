@@ -32,35 +32,37 @@ export default function SideBar() {
 		},
 	];
 	return (
-		<div className="hidden xl:inline-block mt-6 ml-3">
-			{/*  Lista*/}
-			<div className="flex flex-col">
-				<div className="sidebar">
-					<div className="flex items-center">
-						<div className="imgicon">
-							<Image
-								className="rounded-full"
-								objectFit="cover"
-								src={require("../assets/img/facebook-profile.jpg")}
-								layout="fill"
-								alt="facebook logo"
-							/>
+		<div className="hidden xl:inline-block fixed top-20 left-0 w-1/6 h-screen overflow-y-hidden ">
+			<div className="h-4/6 hover:overflow-y-scroll overflow-hidden">
+				{/*  Lista*/}
+				<div className="flex flex-col">
+					<div className="sidebar">
+						<div className="flex items-center">
+							<div className="imgicon">
+								<Image
+									className="rounded-full"
+									objectFit="cover"
+									src={require("../assets/img/facebook-profile.jpg")}
+									layout="fill"
+									alt="facebook logo"
+								/>
+							</div>
 						</div>
+						<h3 className="texto-lateral">Sparrow</h3>
 					</div>
-					<h3 className="texto-lateral">Sparrow</h3>
+					{rutas.map((ruta) => (
+						<div className="sidebar" key={ruta.texto}>
+							<ruta.icono className="icon" />
+							<h3 className="texto-lateral">{ruta.texto}</h3>
+						</div>
+					))}
 				</div>
-				{rutas.map((ruta) => (
-					<div className="sidebar" key={ruta.texto}>
-						<ruta.icono className="icon" />
-						<h3 className="texto-lateral">{ruta.texto}</h3>
+				<div>
+					<h2 className="titulo-lateral border-t py-3">Tus accesos directos</h2>
+					<div className="sidebar">
+						<SearchIcon className="icon" />
+						<h3 className="hidden xl:flex texto-lateral">Buscar grupos</h3>
 					</div>
-				))}
-			</div>
-			<div>
-				<h2 className="titulo-lateral border-t py-3">Tus accesos directos</h2>
-				<div className="sidebar">
-					<SearchIcon className="icon" />
-					<h3 className="hidden xl:flex texto-lateral">Buscar grupos</h3>
 				</div>
 			</div>
 		</div>

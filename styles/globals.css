@@ -55,7 +55,7 @@
 	/* Content */
 	@layer components {
 		.content {
-			@apply w-full md:w-[768px] mt-3 sm:mt-5 md:mt-7;
+			@apply w-full md:w-2/3 sm:w-5/6;
 		}
 		/* Send data */
 		@layer components {

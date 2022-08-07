@@ -47,9 +47,9 @@ export default function Header() {
 						<div className="flex items-center ml-5 mr-2">
 							<BsFacebook className="cursor-pointer  text-blue-500 w-10 h-10" />
 						</div>
-						<div className="bg-gray-100 rounded-full hover:bg-gray-300 xl:flex">
+						<div className="bg-gray-100 rounded-full hover:bg-gray-300 xl:flex ">
 							<AiOutlineSearch className="iconheader-lateral" />
-							<input type="text" placeholder="Buscar en facebook" className="bg-gray-100 rounded-full hover:bg-gray-300 border-0 outline-none xl:inline-flex hidden" />
+							<input type="text" placeholder="Buscar en facebook" className="bg-transparent rounded-full border-0 outline-none xl:inline-flex hidden" />
 						</div>
 					</div>
 				</div>
