@@ -3,16 +3,36 @@ import {
 	RiHtml5Fill,
 	RiReactjsLine,
 	RiLiveFill,
+	RiShareForwardLine,
+	RiVideoAddFill,
 } from "react-icons/ri";
 import { SiTailwindcss, SiFacebookgaming } from "react-icons/si";
 import { GiBackwardTime } from "react-icons/gi";
-import { FaUserFriends, FaUsers, FaFacebookMessenger } from "react-icons/fa";
+import {
+	FaUserFriends,
+	FaUsers,
+	FaFacebookMessenger,
+	FaEllipsisH,
+} from "react-icons/fa";
 import { BiStore, BiHappyAlt } from "react-icons/bi";
-import { BsDisplay, BsFillGrid3X3GapFill, BsBellFill } from "react-icons/bs";
+import {
+	BsDisplay,
+	BsFillGrid3X3GapFill,
+	BsBellFill,
+	BsSticky,
+} from "react-icons/bs";
 import { IoIosArrowDown } from "react-icons/io";
 import { DiJavascript1 } from "react-icons/di";
-import { AiFillHome, AiOutlinePlus } from "react-icons/ai";
-import { MdOutlinePhotoLibrary } from "react-icons/md";
+import {
+	AiFillHome,
+	AiOutlinePlus,
+	AiOutlineLike,
+	AiOutlineSmile,
+	AiOutlineGif,
+	AiOutlineSearch,
+} from "react-icons/ai";
+import { MdOutlinePhotoLibrary, MdPhotoCamera } from "react-icons/md";
+import { GoComment } from "react-icons/go";
 // Header
 const headerIcon = [
 	{
@@ -120,7 +140,18 @@ const sidebarAd = [
 		class: "icon-lateral text-green-500",
 	},
 ];
-
+// Iconos de contacts
+const publicidadIcon = [
+	{
+		icon: RiVideoAddFill,
+	},
+	{
+		icon: AiOutlineSearch,
+	},
+	{
+		icon: FaEllipsisH,
+	},
+];
 // Content
 // Story{
 const storyTitle = [
@@ -155,6 +186,36 @@ const inputIcon = [
 		color: "text-yellow-500",
 	},
 ];
+// reactions
+const reactions = [
+	{
+		icon: AiOutlineLike,
+		name: "Like",
+	},
+	{
+		icon: GoComment,
+		name: "Comment",
+	},
+	{
+		icon: RiShareForwardLine,
+		name: "Share",
+	},
+];
+// reactionComments
+const reactionComments = [
+	{
+		icon: AiOutlineSmile,
+	},
+	{
+		icon: MdPhotoCamera,
+	},
+	{
+		icon: AiOutlineGif,
+	},
+	{
+		icon: BsSticky,
+	},
+];
 export {
 	sidebar,
 	sidebarAd,
@@ -162,4 +223,7 @@ export {
 	headerLateralIcon,
 	storyTitle,
 	inputIcon,
+	reactions,
+	reactionComments,
+	publicidadIcon,
 };

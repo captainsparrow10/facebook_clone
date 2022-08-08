@@ -2,13 +2,26 @@ import React from "react";
 import { datas } from "./data";
 import { AiOutlinePlus } from "react-icons/ai";
 import { ImgProfile } from "../assets/const/functions";
+import { publicidadIcon } from "../assets/const/icons";
 export default function Contacts() {
 	return (
-		<div className="hidden lg:inline-block fixed top-20 right-0 w-1/6 h-screen overflow-y-hidden">
-			<div className=" h-[80%] hover:overflow-y-scroll overflow-hidden scroll-smooth">
-				<h2 className="titulo-lateral pr-4 border-b py-3">Publicidad</h2>
+		<div className="hidden lg:inline-block fixed top-20 right-4 w-1/6 h-screen overflow-y-hidden">
+			<div className=" h-[80%] hover:overflow-y-auto overflow-hidden scroll-smooth">
+				<h2 className="titulo-lateral border-b pr-4 py-3 ">Publicidad</h2>
 				<div className="flex flex-col">
-					<h2 className="titulo-lateral border-t pr-4 py-3 ">Contactos</h2>
+					<div className="flex justify-between items-center">
+						<h2 className="titulo-lateral pr-4 border-t py-3">Contactos</h2>
+						<div className="flex">
+							{publicidadIcon.map((publicidad) => (
+								<div
+									className="hover:bg-gray-300 rounded-full p-2"
+									key={publicidad.icon}
+								>
+									<publicidad.icon className="text-gray-500" />
+								</div>
+							))}
+						</div>
+					</div>
 					{datas.map((data) => (
 						<div
 							key={data.img}

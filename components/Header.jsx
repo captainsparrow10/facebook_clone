@@ -21,7 +21,7 @@ export default function Header() {
 							<input
 								type="text"
 								placeholder="Buscar en facebook"
-								className="bg-transparent rounded-full border-0 outline-none xl:inline-flex hidden"
+								className="bg-transparent rounded-full xl:inline-flex hidden"
 							/>
 						</div>
 					</div>
