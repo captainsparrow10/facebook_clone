@@ -1,5 +1,6 @@
 import { CogIcon } from "@heroicons/react/outline";
 import React from "react";
+import { SidebarIcons } from "../assets/const/functions";
 import { friendIcons } from "../assets/const/icons";
 
 export default function SideBarFriends() {
@@ -10,16 +11,7 @@ export default function SideBarFriends() {
 					<h2 className="font-bold cursor-defaul">Amigos</h2>
 					<CogIcon className="icon animate-spin-slow" />
 				</div>
-				<div className="flex flex-col">
-					{friendIcons.map((friend) => (
-						<div className="sidebar" key={friend.texto}>
-							<div className={friend.classDiv}>
-								<friend.icono className={friend.class} />
-							</div>
-							<h3 className="texto-lateral">{friend.texto}</h3>
-						</div>
-					))}
-				</div>
+				<SidebarIcons dataIcons={friendIcons} />
 			</div>
 		</div>
 	);

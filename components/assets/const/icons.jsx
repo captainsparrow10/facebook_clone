@@ -16,7 +16,7 @@ import {
 	FaEllipsisH,
 	FaUserPlus,
 	FaUserEdit,
-	FaUserAlt,
+	FaStore
 } from "react-icons/fa";
 import { BiStore, BiHappyAlt } from "react-icons/bi";
 import {
@@ -24,9 +24,11 @@ import {
 	BsFillGrid3X3GapFill,
 	BsBellFill,
 	BsSticky,
+	BsFillBookmarkFill
 } from "react-icons/bs";
 import { IoIosArrowDown } from "react-icons/io";
 import { DiJavascript1 } from "react-icons/di";
+import {FiTv} from "react-icons/fi"
 import {
 	AiFillHome,
 	AiOutlinePlus,
@@ -36,7 +38,7 @@ import {
 	AiOutlineSearch,
 	AiFillGift,
 } from "react-icons/ai";
-import { MdOutlinePhotoLibrary, MdPhotoCamera } from "react-icons/md";
+import { MdOutlinePhotoLibrary, MdPhotoCamera, MdSmartDisplay, MdOutlineSell } from "react-icons/md";
 import { GoComment } from "react-icons/go";
 // Header
 const headerIcon = [
@@ -52,7 +54,7 @@ const headerIcon = [
 	},
 	{
 		href: "/watch",
-		icono: BsDisplay,
+		icono: MdSmartDisplay,
 		display: "sm:inline-flex",
 	},
 	{
@@ -261,6 +263,64 @@ const friendIcons = [
 		classDiv: "friend-list"
 	},
 ];
+
+// Watch icons
+const watchIcons = [
+	{
+		texto: "Inicio",
+		icono: MdSmartDisplay,
+		class: "icon-friend text-white",
+		classDiv: "friend-list bg-blue-300"
+	},
+	{
+		texto: "En vivo",
+		icono: RiLiveFill,
+		class: "icon-friend",
+		classDiv: "friend-list"
+	},
+	{
+		texto: "Programas",
+		icono: FiTv,
+		class: "icon-friend",
+		classDiv: "friend-list"
+	},
+	{
+		texto: "Videos guardados",
+		icono: BsFillBookmarkFill,
+		class: "icon-friend",
+		classDiv: "friend-list"
+	},
+
+];
+
+// Store icons
+const storeIcons = [
+	{
+		texto: "Explorar todo",
+		icono: BiStore,
+		class: "icon-friend text-white",
+		classDiv: "friend-list bg-blue-300"
+	},
+	{
+		texto: "Notificaciones",
+		icono: BsBellFill,
+		class: "icon-friend",
+		classDiv: "friend-list"
+	},
+	{
+		texto: "Compra",
+		icono: FaStore,
+		class: "icon-friend",
+		classDiv: "friend-list"
+	},
+	{
+		texto: "Venta",
+		icono: MdOutlineSell,
+		class: "icon-friend",
+		classDiv: "friend-list"
+	},
+
+];
 export {
 	sidebar,
 	sidebarAd,
@@ -272,4 +332,6 @@ export {
 	reactionComments,
 	publicidadIcon,
 	friendIcons,
+	watchIcons,
+	storeIcons
 };

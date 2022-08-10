@@ -1,5 +1,5 @@
 import React from "react";
-import { ImgProfile } from "../assets/const/functions";
+import { ImgProfile, SidebarIcons } from "../assets/const/functions";
 import { sidebar, sidebarAd } from "../assets/const/icons";
 export default function SideBar() {
 	return (
@@ -12,21 +12,11 @@ export default function SideBar() {
 						</div>
 						<h3 className="texto-lateral">Sparrow</h3>
 					</div>
-					{sidebar.map((ruta) => (
-						<div className="sidebar" key={ruta.texto}>
-							<ruta.icono className={ruta.class} />
-							<h3 className="texto-lateral">{ruta.texto}</h3>
-						</div>
-					))}
+					<SidebarIcons dataIcons={sidebar} />
 				</div>
 				<div>
 					<h2 className="titulo-lateral border-t py-3">Tus accesos directos</h2>
-					{sidebarAd.map((ruta) => (
-						<div className="sidebar" key={ruta.texto}>
-							<ruta.icono className={ruta.class} />
-							<h3 className="texto-lateral">{ruta.texto}</h3>
-						</div>
-					))}
+					<SidebarIcons dataIcons={sidebarAd} />
 				</div>
 			</div>
 		</div>
