@@ -5,6 +5,7 @@ import {
 	RiLiveFill,
 	RiShareForwardLine,
 	RiVideoAddFill,
+	RiUserShared2Fill,
 } from "react-icons/ri";
 import { SiTailwindcss, SiFacebookgaming } from "react-icons/si";
 import { GiBackwardTime } from "react-icons/gi";
@@ -13,6 +14,9 @@ import {
 	FaUsers,
 	FaFacebookMessenger,
 	FaEllipsisH,
+	FaUserPlus,
+	FaUserEdit,
+	FaUserAlt,
 } from "react-icons/fa";
 import { BiStore, BiHappyAlt } from "react-icons/bi";
 import {
@@ -30,6 +34,7 @@ import {
 	AiOutlineSmile,
 	AiOutlineGif,
 	AiOutlineSearch,
+	AiFillGift,
 } from "react-icons/ai";
 import { MdOutlinePhotoLibrary, MdPhotoCamera } from "react-icons/md";
 import { GoComment } from "react-icons/go";
@@ -216,6 +221,46 @@ const reactionComments = [
 		icon: BsSticky,
 	},
 ];
+
+// Friends icons
+const friendIcons = [
+	{
+		texto: "Inicio",
+		icono: FaUserFriends,
+		class: "icon-friend text-white",
+		classDiv: "friend-list bg-blue-300"
+	},
+	{
+		texto: "Solicitudes de amistad",
+		icono: RiUserShared2Fill,
+		class: "icon-friend",
+		classDiv: "friend-list"
+	},
+	{
+		texto: "Sugerencias",
+		icono: FaUserPlus,
+		class: "icon-friend",
+		classDiv: "friend-list"
+	},
+	{
+		texto: "Todos los amigos",
+		icono: FaUsers,
+		class: "icon-friend",
+		classDiv: "friend-list"
+	},
+	{
+		texto: "Cumpleaños",
+		icono: AiFillGift,
+		class: "icon-friend",
+		classDiv: "friend-list"
+	},
+	{
+		texto: "Listas personalizadas",
+		icono: FaUserEdit,
+		class: "icon-friend",
+		classDiv: "friend-list"
+	},
+];
 export {
 	sidebar,
 	sidebarAd,
@@ -226,4 +271,5 @@ export {
 	reactions,
 	reactionComments,
 	publicidadIcon,
+	friendIcons,
 };

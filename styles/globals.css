@@ -25,7 +25,7 @@
 	/* Genericas */
 	@layer componnts {
 		.icon {
-			@apply h-6 text-blue-500 sm:h-7 md:h-8 lg:h-9 xl:h-10 cursor-pointer;
+			@apply h-6 text-blue-500  cursor-pointer;
 		}
 		.icon-lateral{
 			@apply h-8 w-8 cursor-pointer text-blue-500
@@ -94,8 +94,11 @@
 		.amigos-btn {
 			@apply w-full lg:w-4/5 text-white my-1 p-1  rounded-xl;
 		}
-		.friends-div {
-			@apply flex items-center hover:bg-gray-200  w-full rounded-3xl p-2 cursor-pointer;
+		.icon-friend{
+			@apply h-7 w-7 cursor-pointer text-gray-500
+		}
+		.friend-list{
+			@apply p-2 bg-gray-300 rounded-full
 		}
 	}
 }
