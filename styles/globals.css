@@ -86,7 +86,7 @@
 	@layer components {
 		/* mobile */
 		.friend-card-mobile{
-			@apply flex overflow-hidden shadow-md w-[385px] font-serif bg-white h-[100px] p-2 mb-2
+			@apply flex overflow-hidden shadow-md w-[385px] font-serif bg-white h-[100px] p-2 mb-2 shadow-gray-300 rounded-md
 		}
 		.friend-card-desktop{
 			@apply flex-col  w-[250px] h-[400px] items-center p-0

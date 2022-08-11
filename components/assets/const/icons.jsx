@@ -8,7 +8,7 @@ import {
 	RiUserShared2Fill,
 } from "react-icons/ri";
 import { SiTailwindcss, SiFacebookgaming } from "react-icons/si";
-import { GiBackwardTime } from "react-icons/gi";
+import { GiBackwardTime, GiConsoleController } from "react-icons/gi";
 import {
 	FaUserFriends,
 	FaUsers,
@@ -24,7 +24,8 @@ import {
 	BsFillGrid3X3GapFill,
 	BsBellFill,
 	BsSticky,
-	BsFillBookmarkFill
+	BsFillBookmarkFill,
+	BsFillPlayFill
 } from "react-icons/bs";
 import { IoIosArrowDown } from "react-icons/io";
 import { DiJavascript1 } from "react-icons/di";
@@ -37,6 +38,7 @@ import {
 	AiOutlineGif,
 	AiOutlineSearch,
 	AiFillGift,
+	AiFillTrophy,
 } from "react-icons/ai";
 import { MdOutlinePhotoLibrary, MdPhotoCamera, MdSmartDisplay, MdOutlineSell } from "react-icons/md";
 import { GoComment } from "react-icons/go";
@@ -230,7 +232,7 @@ const friendIcons = [
 		texto: "Inicio",
 		icono: FaUserFriends,
 		class: "icon-friend text-white",
-		classDiv: "friend-list bg-blue-300"
+		classDiv: "friend-list bg-blue-500"
 	},
 	{
 		texto: "Solicitudes de amistad",
@@ -270,7 +272,7 @@ const watchIcons = [
 		texto: "Inicio",
 		icono: MdSmartDisplay,
 		class: "icon-friend text-white",
-		classDiv: "friend-list bg-blue-300"
+		classDiv: "friend-list bg-blue-500"
 	},
 	{
 		texto: "En vivo",
@@ -299,7 +301,7 @@ const storeIcons = [
 		texto: "Explorar todo",
 		icono: BiStore,
 		class: "icon-friend text-white",
-		classDiv: "friend-list bg-blue-300"
+		classDiv: "friend-list bg-blue-500"
 	},
 	{
 		texto: "Notificaciones",
@@ -321,6 +323,41 @@ const storeIcons = [
 	},
 
 ];
+
+// Store icons
+const gamingIcons = [
+	{
+		texto: "Para ti",
+		icono: SiFacebookgaming,
+		class: "icon-friend text-white",
+		classDiv: "friend-list bg-blue-500"
+	},
+	{
+		texto: "Video",
+		icono: BsFillPlayFill,
+		class: "icon-friend",
+		classDiv: "friend-list"
+	},
+	{
+		texto: "Torneos",
+		icono: AiFillTrophy,
+		class: "icon-friend",
+		classDiv: "friend-list"
+	},
+	{
+		texto: "Jugar",
+		icono: GiConsoleController,
+		class: "icon-friend",
+		classDiv: "friend-list"
+	},
+	{
+		texto: "Notificaciones",
+		icono: BsBellFill,
+		class: "icon-friend",
+		classDiv: "friend-list"
+	},
+
+];
 export {
 	sidebar,
 	sidebarAd,
@@ -333,5 +370,6 @@ export {
 	publicidadIcon,
 	friendIcons,
 	watchIcons,
-	storeIcons
+	storeIcons,
+	gamingIcons
 };

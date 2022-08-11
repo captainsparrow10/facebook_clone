@@ -32,10 +32,10 @@ export default function Personas() {
 										<h3>{data.name.first + " " + data.name.last}</h3>
 									</div>
 									<div className="flex justify-between lg:flex-col items-center lg:justify-center w-full lg:h-2/3">
-										<button className="amigos-btn bg-blue-500 mr-2 lg:mr-0">
+										<button className="amigos-btn bg-blue-200 hover:bg-blue-400 mr-2 lg:mr-0">
 											Agregar
 										</button>
-										<button className="amigos-btn bg-gray-400">Eliminar</button>
+										<button className="amigos-btn bg-gray-200 hover:bg-gray-400">Eliminar</button>
 									</div>
 								</div>
 							</div>
