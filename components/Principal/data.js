@@ -1,17 +1,17 @@
 export const datas = [
 	{
-		img: require("../assets/img/kaisa.jpg"),
-		user: require("../assets/img/riot.png"),
+		img: require("../assets/img/kaisa.webp"),
+		user: require("../assets/img/riot.webp"),
 		name: "Riot",
 	},
 	{
-		img: require("../assets/img/hu tao.jpg"),
-		user: require("../assets/img/genshin.jpg"),
+		img: require("../assets/img/hu tao.webp"),
+		user: require("../assets/img/genshin.webp"),
 		name: "Genshin",
 	},
 	{
-		img: require("../assets/img/optimus.jpg"),
-		user: require("../assets/img/autobots.png"),
+		img: require("../assets/img/optimus.webp"),
+		user: require("../assets/img/autobots.webp"),
 		name: "Autobots",
 	},
 	{
@@ -20,8 +20,8 @@ export const datas = [
 		name: "Guilty Crown",
 	},
 	{
-		img: require("../assets/img/flash.png"),
-		user: require("../assets/img/logo flash.png"),
+		img: require("../assets/img/flash.webp"),
+		user: require("../assets/img/logo flash.webp"),
 		name: "Flash",
 	},
 ];

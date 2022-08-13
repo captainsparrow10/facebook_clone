@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import sparrow from "../img/facebook-profile.jpg";
+import sparrow from "../img/facebook-profile.webp";
 
 function ImgProfile({ url }) {
 	return (

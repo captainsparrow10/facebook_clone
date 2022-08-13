@@ -1,10 +1,10 @@
 import Image from "next/image";
-import React from "react";
+import React, { forwardRef } from "react";
 import { AiOutlineLoading } from "react-icons/ai";
 import { v4 } from "uuid";
-export default function Personas({ results }) {
+ const Personas = forwardRef(({ results }, ref) => {
 	return (
-		<div className="w-full sm:w-4/6 lg:w-5/6 flex justify-center">
+		<div className="w-full sm:w-4/6 lg:w-5/6 flex justify-center" ref={ref}>
 			<div className="p-5 w-full ml-2">
 				<h2 className="font-bold cursor-default pb-2">
 					Personas que quizá conozcas
@@ -46,4 +46,6 @@ export default function Personas({ results }) {
 			</div>
 		</div>
 	);
-}
+})
+Personas.displayName = "Personas"
+export default Personas

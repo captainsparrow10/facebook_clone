@@ -1,10 +1,10 @@
 import Image from "next/image";
-import React from "react";
+import React, { forwardRef } from "react";
 import { v4 } from "uuid";
 import { AiOutlineLoading } from "react-icons/ai";
-export default function Shop({results}) {
+const Shop = forwardRef(({results}, ref) => {
 	return (
-		<div className="w-full sm:w-4/6 lg:w-5/6 flex justify-center">
+		<div className="w-full sm:w-4/6 lg:w-5/6 flex justify-center" ref={ref}>
 			<div className="p-5 w-full ml-2">
 				<h2 className="font-bold cursor-default pb-2">Tienda</h2>
 				<div className="flex results-center flex-grow flex-wrap justify-evenly">
@@ -29,4 +29,6 @@ export default function Shop({results}) {
 			</div>
 		</div>
 	);
-}
+})
+Shop.displayName ="Shop"
+export default Shop

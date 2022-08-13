@@ -24,7 +24,7 @@ export default function Published() {
 			</div>
 			<div className="relative w-full">
 				<Image
-					src={require("../assets/img/kaisa sg.jpg")}
+					src={require("../assets/img/kaisa sg.webp")}
 					layout="responsive"
 					alt="facebook logo"
 				/>

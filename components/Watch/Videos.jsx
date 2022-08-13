@@ -22,7 +22,7 @@ export default function Videos() {
 					<div className="w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] md:w-[60px] md:h-[60px]">
 						<Image
 							className="rounded-full "
-							src={require("../assets/img/facebook-profile.jpg")}
+							src={require("../assets/img/facebook-profile.webp")}
 							layout="responsive"
 							alt="facebook logo"
 						/>
@@ -42,7 +42,7 @@ export default function Videos() {
 				</div>
 				<div className="relative w-full">
 					<Image
-						src={require("../assets/img/kaisa sg.jpg")}
+						src={require("../assets/img/kaisa sg.webp")}
 						layout="responsive"
 						alt="facebook logo"
 					/>

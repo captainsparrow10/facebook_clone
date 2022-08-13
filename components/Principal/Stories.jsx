@@ -23,7 +23,7 @@ export default function Stories() {
 								<Image
 									objectFit="cover"
 									objectPosition="center"
-									src={require("../assets/img/facebook-profile.jpg")}
+									src={require("../assets/img/facebook-profile.webp")}
 									layout="fill"
 									alt={"imagen"}
 								/>
