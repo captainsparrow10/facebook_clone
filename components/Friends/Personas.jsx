@@ -2,10 +2,7 @@ import Image from "next/image";
 import React from "react";
 import { AiOutlineLoading } from "react-icons/ai";
 import { v4 } from "uuid";
-import useSWR from 'swr'
-export default function Personas() {
-	const fetcher = (...args) => fetch(...args).then((res) => res.json()).then((data) => data["results"]);
-	const { data, error } = useSWR("https://randomuser.me/api/?results=18", fetcher);
+export default function Personas({ results }) {
 	return (
 		<div className="w-full sm:w-4/6 lg:w-5/6 flex justify-center">
 			<div className="p-5 w-full ml-2">
@@ -13,8 +10,8 @@ export default function Personas() {
 					Personas que quizá conozcas
 				</h2>
 				<div className="flex items-center flex-grow flex-wrap justify-evenly">
-					{data ? (
-						data.map((data) => (
+					{results ? (
+						results.map((data) => (
 							<div
 								className="friend-card-mobile lg:friend-card-desktop"
 								key={v4()}
@@ -35,7 +32,9 @@ export default function Personas() {
 										<button className="amigos-btn bg-blue-200 hover:bg-blue-400 mr-2 lg:mr-0">
 											Agregar
 										</button>
-										<button className="amigos-btn bg-gray-200 hover:bg-gray-400">Eliminar</button>
+										<button className="amigos-btn bg-gray-200 hover:bg-gray-400">
+											Eliminar
+										</button>
 									</div>
 								</div>
 							</div>
