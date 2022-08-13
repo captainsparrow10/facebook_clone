@@ -4,6 +4,9 @@
 
 @layer components {
 	@layer base {
+		body{
+			@apply bg-gray-100
+		}
 		h1 {
 			@apply text-xl;
 		}
@@ -92,10 +95,10 @@
 			@apply flex-col  w-[250px] h-[400px] items-center p-0
 		}
 		.amigos-btn {
-			@apply w-full lg:w-4/5 text-white my-1 p-1  rounded-xl;
+			@apply w-full sm:w-4/5 text-white my-1 p-1  rounded-xl;
 		}
 		.icon-friend{
-			@apply h-7 w-7 cursor-pointer text-gray-500
+			@apply h-7 w-7 cursor-pointer text-gray-800
 		}
 		.friend-list{
 			@apply p-2 bg-gray-300 rounded-full

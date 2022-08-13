@@ -4,7 +4,7 @@ import SideBarShop from "../components/Store/StoreSB";
 
 export default function store({ request }) {
 	return (
-		<div className="flex w-full mt-4">
+		<div className="flex w-full">
 			<SideBarShop />
 			<Shop results={request} />
 		</div>

@@ -4,7 +4,7 @@ import Personas from "../components/Friends/Personas";
 
 export default function friends({ request }) {
 	return (
-		<div className="flex w-full mt-4">
+		<div className="flex w-full">
 			<SideBarFriends />
 			<Personas results={request} />
 		</div>

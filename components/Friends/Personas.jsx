@@ -2,33 +2,33 @@ import Image from "next/image";
 import React, { forwardRef } from "react";
 import { AiOutlineLoading } from "react-icons/ai";
 import { v4 } from "uuid";
- const Personas = forwardRef(({ results }, ref) => {
+const Personas = forwardRef(({ results }, ref) => {
 	return (
-		<div className="w-full sm:w-4/6 lg:w-5/6 flex justify-center" ref={ref}>
-			<div className="p-5 w-full ml-2">
+		<div className="w-full flex justify-center" ref={ref}>
+			<div className="p-5 w-full sm:w-4/6 lg:w-4/5  ml-2">
 				<h2 className="font-bold cursor-default pb-2">
 					Personas que quizá conozcas
 				</h2>
-				<div className="flex items-center flex-grow flex-wrap justify-evenly">
+				<div className="flex items-center flex-wrap  justify-evenly">
 					{results ? (
 						results.map((data) => (
 							<div
-								className="friend-card-mobile lg:friend-card-desktop"
+								className="friend-card-mobile sm:friend-card-desktop"
 								key={v4()}
 							>
-								<div className="relative w-[80px] h-[80px] lg:w-full lg:h-2/3">
+								<div className="relative w-[80px] h-[80px] sm:w-full sm:h-2/3">
 									<Image
-										className="rounded-full lg:rounded-none"
+										className="rounded-full sm:rounded-none"
 										src={data.picture.large}
 										alt="product"
 										layout="fill"
 									/>
 								</div>
-								<div className="flex flex-col ml-3 lg:ml-0 w-full lg:h-1/3">
-									<div className="lg:h-1/3 flex lg:justify-center items-center">
+								<div className="flex flex-col ml-3 sm:ml-0 w-full sm:h-1/3 justify-center">
+									<div className="sm:h-1/3 flex sm:justify-center items-center">
 										<h3>{data.name.first + " " + data.name.last}</h3>
 									</div>
-									<div className="flex justify-between lg:flex-col items-center lg:justify-center w-full lg:h-2/3">
+									<div className="flex justify-between sm:flex-col items-center sm:justify-center w-full sm:h-2/3">
 										<button className="amigos-btn bg-blue-200 hover:bg-blue-400 mr-2 lg:mr-0">
 											Agregar
 										</button>
@@ -46,6 +46,6 @@ import { v4 } from "uuid";
 			</div>
 		</div>
 	);
-})
-Personas.displayName = "Personas"
-export default Personas
+});
+Personas.displayName = "Personas";
+export default Personas;

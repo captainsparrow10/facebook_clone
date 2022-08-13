@@ -4,7 +4,7 @@ import GamingSB from '../components/Gaming/GamingSB'
 
 export default function gaming() {
   return (
-		<div className="flex w-full mt-4">
+		<div className="flex w-full">
 			<GamingSB />
 			<GamingContent />
 		</div>
