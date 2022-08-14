@@ -58,7 +58,7 @@ export default function Presentacion() {
 						alt="me"
 					/>
 				</div>
-				<h1 className="text-3xl text-center my-4 font-bold">Javier Acosta</h1>
+				<h1 className="text-3xl text-center my-4 font-bold">Sparrow</h1>
 				<h2 className="text-lg text-center text-gray-600 font-medium">Code, Eat, Sleep</h2>
 				<div className="flex justify-between w-full my-4 md:my-6">
 					{iconos.map((icono) => (
